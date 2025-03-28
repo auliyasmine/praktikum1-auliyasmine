@@ -5,13 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        const nama = document.getElementById("nama").value;
-        const nim = document.getElementById("nim").value;
-        const jurusan = document.getElementById("jurusan").value;
-
-        const gifs = ["assets/gif1.gif", "assets/gif2.gif"];
-        const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
-
-        gifContainer.innerHTML = `<img src="${randomGif}" alt="GIF Pilihan" style="width: 100%; max-width: 400px;">`;
+        // Pilih GIF otomatis
+        let gifUrl = "assets/gif1.gif"; // Sesuaikan path gif
+        gifContainer.innerHTML = `<img src="${gifUrl}" alt="GIF Pilihan" style="width: 100%; max-width: 400px;">`;
     });
 });
