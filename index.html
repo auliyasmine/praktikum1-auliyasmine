@@ -4,107 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praktikum 1 - Aulia Yasmin</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="styles.css">
 </head>
-    <script src="script.js"></script>
-
 <body>
     <header>
         <h1>Praktikum 1 - Aulia Yasmin</h1>
     </header>
-
-    <section class="questions">
-        <h2>Pertanyaan Seputar HTML</h2>
-        <ol>
-            <li>Pertanyaan seputar tag
-                <ul>
-                    <li>Apa yang dimaksud dengan tag pada HTML?</li>
-                    <li>Apa itu pembuka dan penutup tag? Apakah hal tersebut terdapat pada semua jenis tag?</li>
-                </ul>
-            </li>
-            <li>Pertanyaan seputar element
-                <ul>
-                    <li>Apa yang dimaksud dengan element?</li>
-                    <li>Apa yang dimaksud dengan tagname, attribute, dan content pada element?</li>
-                    <li>Apakah elemen dapat ditumpuk? Apa yang terjadi bila demikian?</li>
-                </ul>
-            </li>
-            <li>Pertanyaan seputar anchor
-                <ul>
-                    <li>Apa yang dimaksud dengan anchor?</li>
-                    <li>Bagaimana caranya anchor dapat berfungsi, baik dari sisi pendefinisian ataupun pengaplikasiannya?</li>
-                </ul>
-            </li>
-            <li>Pertanyaan seputar multimedia
-                <ul>
-                    <li>Text
-                        <ul>
-                            <li>Sebutkan tag yang dapat digunakan untuk memanipulasi konten teks pada HTML, serta jelaskan fungsinya secara singkat!</li>
-                            <li>Sebutkan tag yang dapat digunakan untuk memanipulasi struktur konten teks pada HTML!</li>
-                        </ul>
-                    </li>
-                    <li>Image
-                        <ul>
-                            <li>Apabila sebuah tag image tidak menampilkan gambar sebagaimana seharusnya, apa saja yang mungkin menyebabkan hal tersebut?</li>
-                            <li>Apabila ternyata ada teks yang menggantikan gambar tersebut, apa yang sebenarnya terjadi?</li>
-                        </ul>
-                    </li>
-                    <li>Audio
-                        <ul>
-                            <li>Bagaimana caranya untuk kita dapat memasukkan audio source dari web (non-lokal)?</li>
-                        </ul>
-                    </li>
-                    <li>Video
-                        <ul>
-                            <li>Apa yang biasanya terjadi apabila atribut autoplay pada tag video tidak berjalan? Apa yang anda harus lakukan sehingga atribut tersebut dapat berfungsi dengan semestinya?</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ol>
-    </section>
-
-    <section class="friends">
-        <h2>Teman Favorit di Kelas</h2>
-        <table>
-            <tr>
-                <th>No</th>
-                <th>Nama</th>
-                <th>NIM</th>
-            </tr>
-            <tr><td>1</td><td>Muhammad Irawan Siswanto</td><td>202332064</td></tr>
-            <tr><td>2</td><td>Alfiyah Faza Ilyana</td><td>202332082</td></tr>
-            <tr><td>3</td><td>Yoga Abdilah</td><td>202332023</td></tr>
-            <tr><td>4</td><td>Fabianus Hans H.L.T</td><td>202332037</td></tr>
-            <tr><td>5</td><td>Ahmad Zulfadhli</td><td>202332038</td></tr>
-        </table>
-    </section>
-
-    <section class="form-section">
-        <h2>Isi Form Berikut</h2>
-        <form onsubmit="return showGif(event)">
-            <label for="nama">Nama:</label>
-            <input type="text" id="nama" name="nama" required>
-            
-            <label for="nim">NIM:</label>
-            <input type="text" id="nim" name="nim" required>
-            
-            <label for="jurusan">Jurusan:</label>
-            <input type="text" id="jurusan" name="jurusan" required>
-            
-            <button type="submit">Submit</button>
-        </form>
-        <div id="gifContainer"></div>
-    </section>
-
-    <script>
-        function showGif(event) {
-            event.preventDefault();
-            let gifUrl = "assets/gif1.gif"; 
-            document.getElementById("gifContainer").innerHTML = `<img src="${gifUrl}" alt="GIF Pilihan" style="width: 100%;">`;
-            return false;
-        }
-    </script>
+    <main>
+        <section>
+            <h2>Pertanyaan Seputar HTML</h2>
+            <ol>
+                <li>Pertanyaan seputar tag
+                    <ol type="a">
+                        <li>Apa yang dimaksud dengan tag pada HTML?</li>
+                        <li>Apa itu pembuka dan penutup tag? Apakah hal tersebut terdapat pada semua jenis tag?</li>
+                    </ol>
+                </li>
+                <li>Pertanyaan seputar elemen
+                    <ol type="a">
+                        <li>Apa yang dimaksud dengan elemen?</li>
+                        <li>Apa yang dimaksud dengan tagname, attribute, dan content pada elemen?</li>
+                        <li>Apakah elemen dapat ditumpuk? Apa yang terjadi bila demikian?</li>
+                    </ol>
+                </li>
+                <li>Pertanyaan seputar anchor
+                    <ol type="a">
+                        <li>Apa yang dimaksud dengan anchor?</li>
+                        <li>Bagaimana caranya anchor dapat berfungsi, baik dari sisi pendefinisian ataupun pengaplikasiannya?</li>
+                    </ol>
+                </li>
+                <li>Pertanyaan seputar multimedia
+                    <ol>
+                        <li>Text
+                            <ol>
+                                <li>Sebutkan tag yang dapat digunakan untuk memanipulasi konten teks pada HTML, serta jelaskan fungsinya secara singkat!</li>
+                                <li>Sebutkan tag yang dapat digunakan untuk memanipulasi struktur konten teks pada HTML!</li>
+                            </ol>
+                        </li>
+                        <li>Image
+                            <ol>
+                                <li>Apabila sebuah tag image tidak menampilkan gambar sebagaimana seharusnya, apa saja yang mungkin menyebabkan hal tersebut?</li>
+                                <li>Apabila ternyata ada teks yang menggantikan gambar tersebut, apa yang sebenarnya terjadi?</li>
+                            </ol>
+                        </li>
+                        <li>Audio
+                            <ol>
+                                <li>Bagaimana caranya untuk kita dapat memasukkan audio source dari web (non-lokal)?</li>
+                            </ol>
+                        </li>
+                        <li>Video
+                            <ol>
+                                <li>Apa yang biasanya terjadi apabila atribut autoplay pada tag video tidak berjalan? Apa yang anda harus lakukan sehingga atribut tersebut dapat berfungsi dengan semestinya?</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Teman Favorit di Kelas</h2>
+            <table border="1">
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>NIM</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Muhammad Irawan Siswanto</td>
+                    <td>202332064</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Alfiyah Faza Ilyana</td>
+                    <td>202332082</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Yoga Abdilah</td>
+                    <td>202332023</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Fabianus Hans H.L.T</td>
+                    <td>202332037</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Ahmad Zulfadhli</td>
+                    <td>202332038</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2>Isi Form Berikut</h2>
+            <form>
+                Nama: <input type="text" name="nama">
+                NIM: <input type="text" name="nim">
+                Jurusan: <input type="text" name="jurusan">
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <section>
+            <h2>GIF Animasi</h2>
+            <img src="assets/gif1.gif" alt="Animasi GIF" width="300">
+        </section>
+    </main>
 </body>
 </html>
