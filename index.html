@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praktikum 1 - Aulia Yasmin</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        function showGIF(event) {
-            event.preventDefault(); // Mencegah form benar-benar submit
-            document.getElementById("gifContainer").innerHTML = `
-                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3h2eDc0eDJndXF5NWVmZ2RzYTR2dm9hMHY4NTIxOGQ5dTB2bWZvMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L7f9JnbS9dBHJ4NQT3/giphy.gif" 
-                alt="Animasi GIF" style="width: 100%; border-radius: 0;">
-            `;
-        }
-    </script>
 </head>
 <body>
+    <script>
+    function showGIF(event) {
+        event.preventDefault(); // Mencegah halaman refresh
+        document.getElementById("gif-section").style.display = "block";
+    }
+</script>
+
     <header>
         <h1>Praktikum 1 - Aulia Yasmin</h1>
     </header>
@@ -70,9 +68,10 @@
                 </li>
             </ol>
         </section>
+
         <section>
             <h2>Teman Favorit di Kelas</h2>
-            <table border="1">
+            <table>
                 <tr>
                     <th>No</th>
                     <th>Nama</th>
@@ -105,19 +104,24 @@
                 </tr>
             </table>
         </section>
+
         <section>
             <h2>Isi Form Berikut</h2>
-            <form onsubmit="showGIF(event)">
+            <form>
                 Nama: <input type="text" name="nama">
                 NIM: <input type="text" name="nim">
                 Jurusan: <input type="text" name="jurusan">
-                <br>
                 <input type="submit" value="Submit">
             </form>
         </section>
-        <section id="gifContainer">
-            <!-- GIF akan muncul di sini setelah submit -->
-        </section>
+
+        <section>
+            <h2>Animasi GIF</h2>
+            <section id="gif-section" style="display: none;">
+    <img id="gif-image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3h2eDc0eDJndXF5NWVmZ2RzYTR2dm9hMHY4NTIxOGQ5dTB2bWZvMSZlcD12MV9pbnRlcm5naWZfYnlfaWQmY3Q9Zw/L7f9JnbS9dBHJ4NQT3/giphy.gif" alt="Animasi GIF">
+</section>
+<input type="submit" value="Submit" onclick="showGIF(event)">
+
     </main>
 </body>
 </html>
