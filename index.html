@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praktikum 1 - Aulia Yasmin</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function showGIF(event) {
+            event.preventDefault(); // Mencegah form benar-benar submit
+            document.getElementById("gifContainer").innerHTML = `
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3h2eDc0eDJndXF5NWVmZ2RzYTR2dm9hMHY4NTIxOGQ5dTB2bWZvMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L7f9JnbS9dBHJ4NQT3/giphy.gif" 
+                alt="Animasi GIF" style="width: 100%; border-radius: 0;">
+            `;
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -27,12 +36,43 @@
                         <li>Apakah elemen dapat ditumpuk? Apa yang terjadi bila demikian?</li>
                     </ol>
                 </li>
+                <li>Pertanyaan seputar anchor
+                    <ol type="a">
+                        <li>Apa yang dimaksud dengan anchor?</li>
+                        <li>Bagaimana caranya anchor dapat berfungsi, baik dari sisi pendefinisian ataupun pengaplikasiannya?</li>
+                    </ol>
+                </li>
+                <li>Pertanyaan seputar multimedia
+                    <ol>
+                        <li>Text
+                            <ol>
+                                <li>Sebutkan tag yang dapat digunakan untuk memanipulasi konten teks pada HTML, serta jelaskan fungsinya secara singkat!</li>
+                                <li>Sebutkan tag yang dapat digunakan untuk memanipulasi struktur konten teks pada HTML!</li>
+                            </ol>
+                        </li>
+                        <li>Image
+                            <ol>
+                                <li>Apabila sebuah tag image tidak menampilkan gambar sebagaimana seharusnya, apa saja yang mungkin menyebabkan hal tersebut?</li>
+                                <li>Apabila ternyata ada teks yang menggantikan gambar tersebut, apa yang sebenarnya terjadi?</li>
+                            </ol>
+                        </li>
+                        <li>Audio
+                            <ol>
+                                <li>Bagaimana caranya untuk kita dapat memasukkan audio source dari web (non-lokal)?</li>
+                            </ol>
+                        </li>
+                        <li>Video
+                            <ol>
+                                <li>Apa yang biasanya terjadi apabila atribut autoplay pada tag video tidak berjalan? Apa yang anda harus lakukan sehingga atribut tersebut dapat berfungsi dengan semestinya?</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
             </ol>
         </section>
-
         <section>
             <h2>Teman Favorit di Kelas</h2>
-            <table>
+            <table border="1">
                 <tr>
                     <th>No</th>
                     <th>Nama</th>
@@ -48,32 +88,36 @@
                     <td>Alfiyah Faza Ilyana</td>
                     <td>202332082</td>
                 </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Yoga Abdilah</td>
+                    <td>202332023</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Fabianus Hans H.L.T</td>
+                    <td>202332037</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Ahmad Zulfadhli</td>
+                    <td>202332038</td>
+                </tr>
             </table>
         </section>
-
         <section>
             <h2>Isi Form Berikut</h2>
             <form onsubmit="showGIF(event)">
-                Nama: <input type="text" name="nama" required>
-                NIM: <input type="text" name="nim" required>
-                Jurusan: <input type="text" name="jurusan" required>
+                Nama: <input type="text" name="nama">
+                NIM: <input type="text" name="nim">
+                Jurusan: <input type="text" name="jurusan">
                 <br>
                 <input type="submit" value="Submit">
             </form>
         </section>
-
-        <!-- GIF yang awalnya disembunyikan -->
-        <section id="gif-section" style="display: none;">
-            <img id="gif-image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3h2eDc0eDJndXF5NWVmZ2RzYTR2dm9hMHY4NTIxOGQ5dTB2bWZvMSZlcD12MV9pbnRlcm5naWZfYnlfaWQmY3Q9Zw/L7f9JnbS9dBHJ4NQT3/giphy.gif" alt="Animasi GIF">
+        <section id="gifContainer">
+            <!-- GIF akan muncul di sini setelah submit -->
         </section>
-
     </main>
-
-    <script>
-        function showGIF(event) {
-            event.preventDefault(); 
-            document.getElementById("gif-section").style.display = "block";
-        }
-    </script>
 </body>
 </html>
