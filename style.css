@@ -1,86 +1,75 @@
-/* Warna pink muda futuristik */
+/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffd6e0;
-    color: #333;
-    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
-/* Header dengan efek futuristik */
+/* Header Styling */
 header {
-    background: linear-gradient(135deg, #ff85a2, #ffc0cb);
+    background: #ff4e50;
     color: white;
-    padding: 20px;
-    font-size: 20px;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Gaya untuk setiap section */
+/* Sections Styling */
 section {
-    background-color: white;
-    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 20px;
     padding: 20px;
-    width: 80%;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Tabel dengan desain minimalis */
-table {
-    width: 80%;
-    margin: 0 auto;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-th {
-    background-color: #ff85a2;
-    color: white;
-}
-
-/* Form dengan efek glow */
-form {
-    background: #fff;
-    padding: 15px;
     border-radius: 10px;
-    width: 60%;
-    margin: auto;
-    box-shadow: 0 0 10px rgba(255, 133, 162, 0.5);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-input {
-    width: 90%;
-    padding: 8px;
-    margin: 5px;
-    border: 2px solid #ff85a2;
-    border-radius: 5px;
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-button {
-    background: #ff85a2;
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background: #ff4e50;
     color: white;
-    padding: 10px 20px;
+}
+
+/* Button & Select Styling */
+button, select {
+    background: #ff4e50;
+    color: white;
     border: none;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
 }
 
-button:hover {
-    background: #ff5f7e;
+button:hover, select:hover {
+    background: #e03e42;
 }
 
-/* Footer */
-footer {
-    background: linear-gradient(135deg, #ff85a2, #ffc0cb);
-    color: white;
-    padding: 10px;
-    border-radius: 20px 20px 0 0;
+/* GIF Section Styling */
+.gif-selector {
+    text-align: center;
+}
+
+#gifContainer img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
     margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
