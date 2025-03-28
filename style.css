@@ -1,0 +1,86 @@
+/* Warna pink muda futuristik */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffd6e0;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header dengan efek futuristik */
+header {
+    background: linear-gradient(135deg, #ff85a2, #ffc0cb);
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Gaya untuk setiap section */
+section {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabel dengan desain minimalis */
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #ff85a2;
+    color: white;
+}
+
+/* Form dengan efek glow */
+form {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(255, 133, 162, 0.5);
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px;
+    border: 2px solid #ff85a2;
+    border-radius: 5px;
+}
+
+button {
+    background: #ff85a2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff5f7e;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #ff85a2, #ffc0cb);
+    color: white;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    margin-top: 20px;
+}
