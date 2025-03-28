@@ -6,6 +6,8 @@
     <title>Praktikum 1 - Aulia Yasmin</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+    <script src="script.js"></script>
+
 <body>
     <header>
         <h1>Praktikum 1 - Aulia Yasmin</h1>
@@ -63,7 +65,7 @@
     </section>
 
     <section class="friends">
-        <h2>Teman Favorit di Kelas</h2>
+        <h2>Teman Favorit</h2>
         <table>
             <tr>
                 <th>No</th>
@@ -79,52 +81,28 @@
     </section>
 
     <section class="form-section">
-        <h2>Form Mahasiswa</h2>
-        <form id="studentForm">
+        <h2>Isi Form Berikut</h2>
+        <form onsubmit="return showGif(event)">
             <label for="nama">Nama:</label>
-            <input type="text" id="nama" required>
+            <input type="text" id="nama" name="nama" required>
+            
             <label for="nim">NIM:</label>
-            <input type="text" id="nim" required>
+            <input type="text" id="nim" name="nim" required>
+            
             <label for="jurusan">Jurusan:</label>
-            <input type="text" id="jurusan" required>
-            <button type="button" onclick="submitForm()">Submit</button>
+            <input type="text" id="jurusan" name="jurusan" required>
+            
+            <button type="submit">Submit</button>
         </form>
-        <div id="formOutput"></div>
-    </section>
-
-    <section class="gif-selector">
-        <h2>Pilih GIF</h2>
-        <select id="gifChoice">
-            <option value="assets/gif1.gif">GIF 1</option>
-            <option value="assets/gif2.gif">GIF 2</option>
-        </select>
-        <button onclick="showGif()">Tampilkan GIF</button>
         <div id="gifContainer"></div>
     </section>
 
     <script>
-        function submitForm() {
-            let nama = document.getElementById("nama").value;
-            let nim = document.getElementById("nim").value;
-            let jurusan = document.getElementById("jurusan").value;
-
-            if (nama && nim && jurusan) {
-                document.getElementById("formOutput").innerHTML = `
-                    <h3>Data Mahasiswa</h3>
-                    <p><strong>Nama:</strong> ${nama}</p>
-                    <p><strong>NIM:</strong> ${nim}</p>
-                    <p><strong>Jurusan:</strong> ${jurusan}</p>
-                `;
-            } else {
-                alert("Harap isi semua kolom!");
-            }
-        }
-
-        function showGif() {
-            let gifChoice = document.getElementById("gifChoice").value;
-            document.getElementById("gifContainer").innerHTML = `
-                <img src="${gifChoice}" alt="GIF Pilihan" style="max-width: 100%; height: auto; margin-top: 10px;">
-            `;
+        function showGif(event) {
+            event.preventDefault();
+            let gifUrl = "assets/gif1.gif"; // Ubah sesuai lokasi penyimpanan gif
+            document.getElementById("gifContainer").innerHTML = `<img src="${gifUrl}" alt="GIF Pilihan" style="width: 100%;">`;
+            return false;
         }
     </script>
 </body>
