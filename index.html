@@ -4,37 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praktikum 1 - Aulia Yasmin</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #FFC0CB;
-            text-align: center;
-            padding: 20px;
-        }
-        .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            margin: auto;
-        }
-        h1 {
-            color: white;
-            background-color: #FF6699;
-            padding: 20px;
-            border-radius: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <h1>Praktikum 1 - Aulia Yasmin</h1> <!-- Judul sudah diperbaiki -->
-    
-    <div class="container">
-        <h2>Pertanyaan Seputar HTML</h2>
-    </div>
+    <header>
+        <h1>Praktikum 1 - Aulia Yasmin</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Pertanyaan Seputar HTML</h2>
+            <ol>
+                <li><strong>Pertanyaan seputar tag</strong>
+                    <ul>
+                        <li>Apa yang dimaksud dengan tag pada HTML?</li>
+                        <li>Apa itu pembuka dan penutup tag? Apakah hal tersebut terdapat pada semua jenis tag?</li>
+                    </ul>
+                </li>
+                <li><strong>Pertanyaan seputar elemen</strong>
+                    <ul>
+                        <li>Apa yang dimaksud dengan elemen?</li>
+                        <li>Apa yang dimaksud dengan tagname, attribute, dan content pada elemen?</li>
+                        <li>Apakah elemen dapat ditumpuk? Apa yang terjadi bila demikian?</li>
+                    </ul>
+                </li>
+                <li><strong>Pertanyaan seputar anchor</strong>
+                    <ul>
+                        <li>Apa yang dimaksud dengan anchor?</li>
+                        <li>Bagaimana caranya anchor dapat berfungsi, baik dari sisi pendefinisian ataupun pengaplikasiannya?</li>
+                    </ul>
+                </li>
+                <li><strong>Pertanyaan seputar multimedia</strong>
+                    <ul>
+                        <li><strong>Text</strong>
+                            <ul>
+                                <li>Sebutkan tag yang dapat digunakan untuk memanipulasi konten teks pada HTML, serta jelaskan fungsinya secara singkat!</li>
+                                <li>Sebutkan tag yang dapat digunakan untuk memanipulasi struktur konten teks pada HTML!</li>
+                            </ul>
+                        </li>
+                        <li><strong>Image</strong>
+                            <ul>
+                                <li>Apabila sebuah tag image tidak menampilkan gambar sebagaimana seharusnya, apa saja yang mungkin menyebabkan hal tersebut?</li>
+                                <li>Apabila ternyata ada teks yang menggantikan gambar tersebut, apa yang sebenarnya terjadi?</li>
+                            </ul>
+                        </li>
+                        <li><strong>Audio</strong>
+                            <ul>
+                                <li>Bagaimana caranya untuk kita dapat memasukkan audio source dari web (non-lokal)?</li>
+                            </ul>
+                        </li>
+                        <li><strong>Video</strong>
+                            <ul>
+                                <li>Apa yang biasanya terjadi apabila atribut autoplay pada tag video tidak berjalan? Apa yang harus dilakukan agar atribut tersebut berfungsi dengan semestinya?</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Teman Favorit</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>NIM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Muhammad Irawan Siswanto</td>
+                        <td>202332064</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Alfiyah Faza Ilyana</td>
+                        <td>202332082</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Yoga Abdilah</td>
+                        <td>202332023</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Fabianus Hans H.L.T</td>
+                        <td>202332037</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Ahmad Zulfadhli</td>
+                        <td>202332038</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Formulir</h2>
+            <form id="gifForm">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="gifSelect">Pilih GIF:</label>
+                <select id="gifSelect">
+                    <option value="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif">Dancing Cat</option>
+                    <option value="https://media.giphy.com/media/l0HlLAbcIewJdPDXG/giphy.gif">Funny Dog</option>
+                    <option value="https://media.giphy.com/media/13CoXDiaCcCoyk/giphy.gif">Spongebob Laugh</option>
+                </select>
+
+                <button type="button" onclick="showGif()">Submit</button>
+            </form>
+
+            <div id="gifContainer"></div>
+        </section>
+    </main>
+
+    <script>
+        function showGif() {
+            let selectedGif = document.getElementById("gifSelect").value;
+            let gifContainer = document.getElementById("gifContainer");
+
+            gifContainer.innerHTML = `<img src="${selectedGif}" alt="Selected GIF" style="max-width: 300px; margin-top: 10px;">`;
+        }
+    </script>
 
 </body>
 </html>
-
